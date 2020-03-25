@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!--meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/-->
+		<script src="./gsap.min.js"></script>
+		<title>ZeroTwo Desktop</title>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			#img {
+				margin: 0;
+				user-select: none;
+				width: 128px;
+				height: 128px;
+				background-size: cover;
+				background-position: center;
+				background-image: url("./002.png");
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<audio id="audio" src="audio/baka1.mp3"></audio>
+		<div id="img"></div>
+		<div id="msg"></div>
+
+		<script src="./p5.min.js"></script>
+		<script src="./p5speech.js"></script>
+		<script src="./renderer.js"></script>
+	</body>
+</html>
