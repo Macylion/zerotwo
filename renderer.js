@@ -1,22 +1,27 @@
 const sounds = [
-	"./audio/baka1.mp3",
-	"./audio/baka3.mp3",
-	"./audio/darling.mp3",
-	"./audio/ecchi.mp3",
-	"./audio/hentai.mp3",
-	"./audio/nya.mp3"
+  "./audio/darling/001.mp3",
+  "./audio/darling/002.mp3",
+  "./audio/darling/003.mp3",
+  "./audio/darling/004.mp3",
+  "./audio/darling/005.mp3",
+  "./audio/darling/006.mp3",
+  "./audio/darling/007.mp3",
+  "./audio/darling/008.mp3",
+  "./audio/darling/009.mp3",
+  "./audio/darling/010.mp3",
+  "./audio/darling/011.mp3",
+  "./audio/darling/012.mp3",
 ];
 
 function audio() {
-	var audio = document.getElementById("audio");
-	//audio.src = sounds[Math.floor(Math.random() * 6)];
-	audio.src = sounds[2];
-	audio.volume = 1;
-	audio.play();
-	gsap.to("#img", { duration: 0.4, y: "20px" });
-	audio.onended = () => {
-		gsap.to("#img", { duration: 0.4, y: "0px" });
-	};
+  var audio = document.getElementById("audio");
+  audio.src = sounds[Math.floor(Math.random() * 12)];
+  audio.volume = 1;
+  audio.play();
+  gsap.to("#img", { duration: 0.4, y: "20px" });
+  audio.onended = () => {
+    gsap.to("#img", { duration: 0.4, y: "0px" });
+  };
 }
 
 document.getElementById("img").onclick = audio;
